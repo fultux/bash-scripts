@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#Uptime of the system
+up=`uptime -p`
+nbr_users=`uptime | awk -F "," '{ print $2 }'`
+
+
+ echo "The system has been up since ${up}"
+ echo -e "Number of users currently logged in: ${nbr_users}"
