@@ -10,8 +10,8 @@ do
     
     if [ $fs_usage -ge 90 ]
     then 
-        echo "$fs_name: usage has reach space limit"
+        echo "$fs_name: $(tput setaf 1) KO - more than 90% space used."
     else
-        echo "$fs_name: OK"
+        echo "$fs_name: $(tput setaf 2) OK"
     fi
 done
