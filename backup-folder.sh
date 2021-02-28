@@ -18,12 +18,12 @@ date=`date +%F`
 
 if [ -z $4 ]
 then
-    tar -cvf $backup_name_$date.tar $source_folder
-    rsync -az ./$backup_name_$date.tar $destination_folder/
-    if [ -f $destination_folder/$source_folder.tar ]
+    tar -cvf ${backup_name}_$date.tar $source_folder
+    rsync -az ./${backup_name}_$date.tar $destination_folder/
+    if [ -f ./${backup_name}_$date.tar ]
     then
         echo "Archive transfered"
-        rm ./$backup_name_$date.tar
+        rm ./${backup_name}_$date.tar
     else 
         echo "Archive not transfered "
         exit 1
