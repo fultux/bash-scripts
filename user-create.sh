@@ -26,7 +26,7 @@ else
     #Generate password
     password=`pwgen -B -n -y -s -N 1 12`
     echo -e "$password\n$password" | passwd $username
-    passwd -f $username
+    passwd -e $username
 
 
     echo "Account created."
