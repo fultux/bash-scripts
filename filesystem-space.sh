@@ -1,10 +1,13 @@
 #!/bin/bash
 
-fs_list_full=`df -h -x devtmpfs -x tmpfs | grep -v Filesystem`
-for i in $fs_list_full 
+
+liste_fs_size=`df -h -x devtmpfs -x tmpfs | grep -v Filesystem | awk '{print $1","$5}' | tr -d "%"`
+
+for i in $liste_fs_size
 do
-    fs_usage=`$i | awk '{print $5}'  | tr -d "%"`
-    fs_name= `$i | awk '{print $1}'`
+    fs_name=`$i | awk -F "," '{print $1}'`
+    fs_usage=`$i | awk -F "," '{print $2}'`
+    
     if [ $fs_usage >= 90 ]
     then 
         echo "$fs_name usage has reach space limit"
