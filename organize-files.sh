@@ -1,33 +1,35 @@
 #!/bin/bash
 
-source_folder="/tmp"
+source_folder="/tmp/files"
 destination_folder="/home/$USER"
 
 audio_files="mp3 ogg wav flac aac"
-video_files="avi,mp4,wmv,mkv"
-image_files="jpeg,jpg,gif,png,bmp"
-document_files="txt,ppt,doc,docx,csv,xls,xlsx,pdf"
+video_files="avi mp4 wmv mkv"
+image_files="jpeg jpg gif png bmp"
+document_files="txt ppt doc docx csv xls xlsx pdf"
+
+
 
 
 for i in $audio_files
-do 
-    mv $source_folder/*.$i  $destination_folder/Music
+do
+find $source_folder -type f -name "*.$i"
 done
 
 
 for i in $video_files
 do 
-     mv $source_folder/*.$i  $destination_folder/Videos
+     find $source_folder -type f -name "*.$i"
 done
 
 
 for i in $image_files
 do 
-     mv $source_folder/*.$i  $destination_folder/Pictures
+     find $source_folder -type f -name "*.$i"
 done
 
 
 for i in $document_files
 do 
-    mv $source_folder/*.$i  $destination_folder/Documents
+    find $source_folder -type f -name "*.$i"
 done
