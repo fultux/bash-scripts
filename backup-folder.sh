@@ -1,6 +1,7 @@
 #!/bin/bash
-#Backup folder in another destination 
-#Script based on Rsync. It assumes that rsync is already installed
+#Backup folder in another destination.
+#Script based on Rsync. It assumes that rsync is already installed.
+#Must be reworked.
 
 if [ -z $1 ] || [ -z $2 ] || [ -z $3 ]
 then
