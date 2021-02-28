@@ -8,7 +8,7 @@ do
     fs_name=`echo "$i" | awk -F "," '{print $1}'`
     fs_usage=`echo "$i" | awk -F "," '{print $2}'`
     
-    if [ $fs_usage >= 90 ]
+    if [ $fs_usage -ge 90 ]
     then 
         echo "$fs_name usage has reach space limit"
     else
