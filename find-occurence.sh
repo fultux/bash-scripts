@@ -5,4 +5,4 @@ pattern="data"
 filetype".c"
 
 
-find $location -name "*$pattern*.c"
+find $location -type f -name "*$pattern*.c"
