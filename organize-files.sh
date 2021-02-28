@@ -11,6 +11,26 @@ document_files="txt,ppt,doc,docx,csv,xls,xlsx,pdf"
 
 for i in $audio_files
 do 
-    ls $source_folder/*.$i
+    echo "mv $source_folder/*.$i  $destination_folder"
 
+done
+
+
+for i in $video_files
+do 
+    echo "mv $source_folder/*.$i  $destination_folder"
+
+done
+
+
+for i in $image_files
+do 
+    echo "mv $source_folder/*.$i  $destination_folder"
+
+done
+
+
+for i in $document_files
+do 
+     echo "mv $source_folder/*.$i  $destination_folder"
 done
