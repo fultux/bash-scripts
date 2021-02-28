@@ -10,7 +10,7 @@ do
     
     if [ $fs_usage -ge 90 ]
     then 
-        echo "$fs_name usage has reach space limit"
+        echo "$fs_name: usage has reach space limit"
     else
         echo "$fs_name: OK"
     fi
