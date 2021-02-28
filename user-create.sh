@@ -21,7 +21,7 @@ then
 else
     echo "user not present continue"
     #user create
-    useradd -m -s /bin/bash -c "Account of user: $username - email: $email" $username
+    useradd -m -s /bin/bash -c "$username - email: $email" $username
 
     #Generate password
     password=`pwgen -B -n -y -s -N 1 12`
