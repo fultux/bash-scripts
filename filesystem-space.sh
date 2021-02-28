@@ -16,7 +16,8 @@ do
     if [ $fs_usage -ge 95 ]
     then
         echo -e "${NOCOLOR}$fs_name: ${RED}KO - more than 95% space used."
-    elif  [ $fs_usage -ge 95 ]
+    elif  [ $fs_usage -ge 90 ]
+    then
         echo -e "${NOCOLOR}$fs_name: ${ORANGE}WARNING - more than 90% space used."
     else
         echo -e "${NOCOLOR}$fs_name: ${GREEN}OK"
