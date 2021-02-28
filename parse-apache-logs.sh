@@ -1,6 +1,6 @@
 #!/bin/bash
 
-"Enter client IP:"
+echo "Enter client IP:"
 read ip
 
 nbr_requests=`grep $ip /var/log/apache2/access.log | wc -l`
