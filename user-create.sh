@@ -5,7 +5,7 @@ read username
 echo -e "Enter email contact:"
 read email
 
-if [ -z username ] || [ -z email ]
+if [ -z $username  ] || [ -z $email ]
 then 
 echo "Please enter a username AND an email"
 exit 1
