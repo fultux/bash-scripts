@@ -13,7 +13,7 @@ destination_folder=$2
 
 if [ -z $3 ]
 then
-    tar -cvf $source_folder.tar $destination_folder
+    tar -cvf $source_folder.tar $source_folder
     rsync -az $source_folder/$source_folder.tar $destination_folder/
     if [ -f $destination_folder/$source_folder.tar ]
     then
@@ -25,7 +25,7 @@ then
     fi
 else
     remote_host=$3
-    tar -cvf $source_folder.tar $destination_folder
+    tar -cvf $source_folder.tar $source_folder
     rsync -az $source_folder/$source_folder.tar $3:$source_folder/
     #Laziness
     echo "Please ensure that the file was transfered on the destination server"
