@@ -19,7 +19,7 @@ document_files="txt ppt doc docx csv xls xlsx pdf"
 echo -e "${NOCOLOR}---Audio files copy..."
 for i in $audio_files
 do
-find $source_folder -type f -name "*.$i"  -exec mv -t $destination_folder/Music {} \;
+find $source_folder  -name "*.$i"  -exec mv -t $destination_folder/Music {} \;
     if [ $? -ne 0 ]
     then
     echo -e "${RED}ERROR - Error during the copy of Document files"
