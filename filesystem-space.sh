@@ -13,10 +13,10 @@ do
     fs_name=`echo "$i" | awk -F "," '{print $1}'`
     fs_usage=`echo "$i" | awk -F "," '{print $2}'`
     
-    if [ $fs_usage -ge 95 ]
+    if [ $fs_usage -ge 90 ]
     then
         echo -e "${NOCOLOR}$fs_name: ${RED}KO - more than 95% space used."
-    elif  [ $fs_usage -ge 90 ]
+    elif  [ $fs_usage -ge 80 ]
     then
         echo -e "${NOCOLOR}$fs_name: ${ORANGE}WARNING - more than 90% space used."
     else
