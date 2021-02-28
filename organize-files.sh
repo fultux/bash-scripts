@@ -16,7 +16,7 @@ document_files="txt ppt doc docx csv xls xlsx pdf"
 
 
 
-echo "-- Audio files copy..."
+echo -e "${NOCOLOR}Audio files copy..."
 for i in $audio_files
 do
 find $source_folder -type f -name "*.$i"  -exec mv -t $destination_folder/Music {} \;
@@ -26,9 +26,9 @@ find $source_folder -type f -name "*.$i"  -exec mv -t $destination_folder/Music 
     exit 1
     fi
 done
-echo -e "${NOCOLOR}Audio Files Copy : ${GREEN}OKOK"
+echo -e "${NOCOLOR}Audio Files Copy : ${GREEN}OK"
 
-echo "-- Video files copy..."
+echo -e "${NOCOLOR}-- Video files copy..."
 for i in $video_files
 do 
      find $source_folder -type f -name "*.$i" -exec mv -t $destination_folder/Videos {} \;
@@ -41,7 +41,7 @@ done
 echo -e "${NOCOLOR} Video Files Copy : ${GREEN}OK"
 
 
-echo "-- Image files copy..."
+echo -e "${NOCOLOR}Image files copy..."
 for i in $image_files
 do 
      find $source_folder -type f -name "*.$i" -exec mv -t $destination_folder/Pictures {} \;
@@ -51,9 +51,9 @@ do
     exit 1
     fi
 done
-echo -e "${NOCOLOR} Image Files Copy : ${GREEN}OKOK"
+echo -e "${NOCOLOR} Image Files Copy : ${GREEN}OK"
 
-echo "-- Document files copy..."
+echo -e "${NOCOLOR}Document files copy..."
 for i in $document_files
 do 
     find $source_folder -type f -name "*.$i" -exec mv -t $destination_folder/Documents {} \;
