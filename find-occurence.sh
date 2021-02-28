@@ -2,7 +2,7 @@
 
 location="/"
 pattern="data"
-filetype".c"
+filetype="c"
 
 
-find $location -type f -name "*$pattern*.c"
+find $location -type f -name "*$pattern*.$filetype"
