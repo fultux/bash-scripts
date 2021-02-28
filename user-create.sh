@@ -12,10 +12,9 @@ exit 1
 fi
 
 
-passwd=`cat /etc/passwd | awk -F ":" '{print $1}'`
+username-present=`cat /etc/passwd | awk -F ":" '{print $1}' | grep $username`
 
-
-if [ "$username" == "$passwd | grep $username"  ]
+if [ "$username" == "${username-present}"  ]
 then 
     echo "user already present"
 else
