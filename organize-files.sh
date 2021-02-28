@@ -10,13 +10,13 @@ document_files="txt,ppt,doc,docx,csv,xls,xlsx,pdf"
 
 
 #Find audio video files
-ls '$source_folder/*.{"$audio_files"}'
+ls $source_folder/??*.{$audio_files}
 
 #Find video files
-ls '$source_folder/*.{"$video_files"}'
+ls $source_folder/??*.{$video_files}
 
 #find image files
-ls '$source_folder/*.{"$image_files"}'
+ls $source_folder/??*.{$image_files}
 
 #Find document files
-ls '$source_folder/*.{"$document_files"}'
+ls $source_folder/??*.{$document_files}
