@@ -12,6 +12,6 @@ do
     then 
         echo "$fs_name usage has reach space limit"
     else
-        echo "everything is fine"
+        echo "$fs_name: OK"
     fi
 done
