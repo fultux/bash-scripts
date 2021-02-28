@@ -17,12 +17,23 @@ username_present=`cat /etc/passwd | awk -F ":" '{print $1}' | grep $username`
 if [ "$username" == "${username_present}"  ]
 then 
     echo "user already present"
+    exit 1
 else
     echo "user not present continue"
+    #user create
+    useradd -m -s /bin/bash -c "Account of user: $username - email: $email" $username
+
+    #Generate password
+    password=`pwgen -B -n -y -s -N 1 12`
+    echo -e "$password\n$password" | passwd $username
+    passwd -f $username
+
+
+    echo "Account created."
+    echo -e "Username: $username"
+    echo -e "Password: $password"
+    echo -e "Password must be changed after the first connexion."
+
+
 fi
 
-#user create
-#useradd -m -s /bin/bash -c "Account of user: $username - email: $email" $username
-
-#Generate password
-#pwgen -B -n -y -s -N 1 12
